@@ -153,7 +153,7 @@ if (!Date.now)
                     'position' : options.flakePosition,
                     'top' : this.y,
                     'left' : this.x,
-                    'fontSize' : 0,
+                    'fontSize' : options.fontSize || 0,
                     'zIndex' : options.flakeIndex
                 });
 
