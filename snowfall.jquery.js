@@ -140,7 +140,9 @@ if (!Date.now)
                     flakeMarkup.src = options.image;
                 }else{
                     flakeMarkup = document.createElement("div");
-                    $(flakeMarkup).css({'background' : options.flakeColor});
+                    flakeMarkup.innerText = options.icon
+                    $(flakeMarkup).css({'transform' : 'rotate('+
+                    Math.random()*360+'deg)'});
                 }
 
                 $(flakeMarkup).attr({
