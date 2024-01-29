@@ -320,7 +320,7 @@ if (!Date.now)
 
             // initialize the flakes
             for(i = 0; i < options.flakeCount; i+=1){
-                flakes.push(new Flake(random(widthOffset,elWidth - widthOffset), random(0, elHeight), random((options.minSize * 100), (options.maxSize * 100)) / 100, random(options.minSpeed, options.maxSpeed)));
+                flakes.push(new Flake(random(widthOffset,elWidth - widthOffset), random(0, elHeight-20), random((options.minSize * 100), (options.maxSize * 100)) / 100, random(options.minSpeed, options.maxSpeed)));
             }
 
             // This adds the style to make the snowflakes round via border radius property
