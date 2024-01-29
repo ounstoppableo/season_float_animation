@@ -153,7 +153,7 @@ if (!Date.now)
                     'position' : options.flakePosition,
                     'top' : this.y,
                     'left' : this.x,
-                    'fontSize' : options.fontSize || 0,
+                    'fontSize' : options.image? 0 : this.size,
                     'zIndex' : options.flakeIndex
                 });
 
@@ -170,7 +170,7 @@ if (!Date.now)
                 this.update = function(){
                     this.y += this.speed;
 
-                    if(this.y > (elHeight) - (this.size  + 6)){
+                    if(this.y > (elHeight) - (this.size  + 20)){
                         this.reset();
                     }
 
@@ -320,7 +320,7 @@ if (!Date.now)
 
             // initialize the flakes
             for(i = 0; i < options.flakeCount; i+=1){
-                flakes.push(new Flake(random(widthOffset,elWidth - widthOffset), random(0, elHeight-20), random((options.minSize * 100), (options.maxSize * 100)) / 100, random(options.minSpeed, options.maxSpeed)));
+                flakes.push(new Flake(random(widthOffset,elWidth - widthOffset), random(0, elHeightf), random((options.minSize * 100), (options.maxSize * 100)) / 100, random(options.minSpeed, options.maxSpeed)));
             }
 
             // This adds the style to make the snowflakes round via border radius property
