@@ -87,7 +87,7 @@ if (!Date.now)
         window.requestAnimationFrame = function(callback) {
             var now = Date.now();
             var nextTime = Math.max(lastTime + 16, now);
-            return setTimeout(function() { callback(lastTime = nextTime); },
+            const timer = setTimeout(function() { callback(lastTime = nextTime); clearTimeout(timer) },
                               nextTime - now);
         };
         window.cancelAnimationFrame = clearTimeout;
