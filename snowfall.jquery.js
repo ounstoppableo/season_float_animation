@@ -90,7 +90,6 @@ if (!Date.now)
             const timer = setTimeout(function() { callback(lastTime = nextTime); clearTimeout(timer) },
                               nextTime - now);
         };
-        window.cancelAnimationFrame = clearTimeout;
     }
 }());
 
@@ -347,7 +346,7 @@ if (!Date.now)
                     flakes[i].update();
                 }
 
-                snowTimeout = requestAnimationFrame(function(){snow()});
+                requestAnimationFrame(function(){snow()});
             }
 
             snow();
@@ -356,7 +355,7 @@ if (!Date.now)
             this.clear = function(){
                 $('.snowfall-canvas').remove();
                 $(element).children('.snowfall-flakes').remove();
-                cancelAnimationFrame(snowTimeout);
+                // cancelAnimationFrame(snowTimeout);
             }
     };
 
