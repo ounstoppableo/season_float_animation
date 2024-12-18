@@ -97,14 +97,13 @@ if (!Date.now)
     $.snowfall = function(element, options){
         var flakes = [],
             defaults = {
-                flakeCount : 35,
+		flakeCount: 10,
+     		minSpeed: 1,
+      		minSize: 8,
+      		maxSize: 25,
                 flakeColor : '#ffffff',
 				flakePosition: 'absolute',
                 flakeIndex: 999999,
-                minSize : 1,
-                maxSize : 2,
-                minSpeed : 1,
-                maxSpeed : 5,
                 round : false,
                 shadow : false,
                 collection : false,
